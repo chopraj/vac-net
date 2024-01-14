@@ -170,7 +170,7 @@ const Beneficiary = () => {
             </Label>
             <DatePicker
               date={beneficiary?.birthday}
-              setDate={handleBirthDateChange}
+              // setDate={handleBirthDateChange}
             />
           </div>
         )}
