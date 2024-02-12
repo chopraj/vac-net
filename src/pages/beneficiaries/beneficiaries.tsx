@@ -80,14 +80,14 @@ const Beneficiaries = () => {
     const getBeneficiaries = async () => {
       try {
         const data: Beneficiary[] = await fetch(
-          "http://localhost:3001/beneficiary/all",
+          "https://vacnet-backend-deploy.vercel.app/beneficiary/all",
           {
             headers: {
               "Content-Type": "application/json",
             },
           },
         ).then((res: Response) => res.json() as unknown as Beneficiary[]);
-        console.log(data);
+        console.log("data bro",data);
         // TODO: decide what the initial sort should be
         setBeneficiaries(data);
       } catch (error) {
